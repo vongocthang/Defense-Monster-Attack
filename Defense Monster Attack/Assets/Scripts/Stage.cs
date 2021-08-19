@@ -20,6 +20,7 @@ public class Stage : MonoBehaviour
 
         sceneOpened = PlayerPrefs.GetInt("SceneOpened");
 
+        Debug.Log(PlayerPrefs.GetInt("SceneOpened"));
         //Unlock();
     }
 

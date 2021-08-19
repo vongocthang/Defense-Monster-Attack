@@ -20,6 +20,7 @@ public class HomeController : MonoBehaviour
     //Chơi màn mới nhất
     public void StartGame()
     {
+        //Nếu là lần đầu chơi, load scene số 1
         if(PlayerPrefs.GetInt("SceneOpened") == 0)
         {
             SceneManager.LoadScene(1);

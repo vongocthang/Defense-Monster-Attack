@@ -15,6 +15,8 @@ public class Monster : MonoBehaviour
     public ParticleSystem psDie;
     bool dead = false;
 
+    float timeStart;
+
     //public GameObject test;
 
     // Start is called before the first frame update
@@ -26,6 +28,8 @@ public class Monster : MonoBehaviour
         damge = infor.damge;
         cd = GetComponent<Collider2D>();
         moveSpeed = infor.speed;
+
+        timeStart = Time.time;
     }
 
     // Update is called once per frame
@@ -53,7 +57,10 @@ public class Monster : MonoBehaviour
         {
             count -= 1;
             damge = count;
-            Debug.Log("Trung ten");
+        }
+        if (other.tag == "Gate")
+        {
+            Debug.Log(gameObject.tag + " = " + (Time.time - timeStart));
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -12,24 +13,28 @@ public class GameController : MonoBehaviour
     public bool play;//Kiểm tra đã ấn nút Start
     public float timeStart;//Mốc thời gian bắt đầu chơi
     public Player player;
+    public Slider countTime;//Hiển thị thời gian giới hạn của màn chơi
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(PlayerPrefs.GetInt("SceneOpened"));
-
+        //Debug.Log(PlayerPrefs.GetInt("SceneOpened"));
+        //
         SceneOpened();
-
+        //
         gate = GameObject.FindGameObjectsWithTag("Gate");
-
+        //
         gameOver = GameObject.FindGameObjectWithTag("GameOver");
         gameOver.SetActive(false);
-
+        //
         complete = GameObject.FindGameObjectWithTag("Complete");
         complete.SetActive(false);
-
+        //
         player = GameObject.Find("Player").GetComponent<Player>();
         player.enabled = false;
+        //Hiển thị thời gian giới hạn
+        countTime.maxValue = timeFinish;
+        countTime.value = timeFinish;
     }
 
     //Lưu màn chơi được mở khóa mới nhất
@@ -46,6 +51,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ShowLimitedTime();
+
         GameOver();
     }
 
@@ -90,19 +97,21 @@ public class GameController : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0f;
+        play = false;
     }
 
     //Ok rồi chơi tiếp
     public void Resume()
     {
         Time.timeScale = 1f;
+        play = true;
     }
 
-    //Bắt đầu chơi
+    //Bắt đầu chơi từ màn mới nhất đã mở khóa
     public void StartGame()
     {
         play = true;
-        timeStart = Time.time;
+        timeStart = Time.time;//Mốc thời gian bắt đầu chơi
     }
 
     //Mở khóa hành động bắn tên
@@ -115,5 +124,14 @@ public class GameController : MonoBehaviour
     public void StopPlayer()
     {
         player.enabled = false;
+    }
+
+    void ShowLimitedTime()
+    {
+        if (play == true)
+        {
+            float time= timeFinish + timeStart - Time.time;
+            countTime.value = time;
+        }
     }
 }
