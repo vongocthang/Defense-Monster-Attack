@@ -10,10 +10,11 @@ public class GameController : MonoBehaviour
     public GameObject gameOver;//UI
     public GameObject complete;//UI
     public float timeFinish;//Thời gian giới hạn của màn chơi
+    public float countTime;//Đếm thời gian
     public bool play;//Kiểm tra đã ấn nút Start
     public float timeStart;//Mốc thời gian bắt đầu chơi
     public Player player;
-    public Slider countTime;//Hiển thị thời gian giới hạn của màn chơi
+    public Slider timeBar;//Hiển thị thời gian giới hạn của màn chơi
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +34,9 @@ public class GameController : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>();
         player.enabled = false;
         //Hiển thị thời gian giới hạn
-        countTime.maxValue = timeFinish;
-        countTime.value = timeFinish;
+        timeBar.maxValue = timeFinish;
+        timeBar.value = timeFinish;
+        countTime = timeFinish;
     }
 
     //Lưu màn chơi được mở khóa mới nhất
@@ -54,6 +56,8 @@ public class GameController : MonoBehaviour
         ShowLimitedTime();
 
         GameOver();
+
+        Complete();
     }
 
     //Nước mắt đã rơi-trò chơi kết thúc
@@ -65,6 +69,7 @@ public class GameController : MonoBehaviour
             if (g.count <= 0)
             {
                 gameOver.SetActive(true);
+                play = false;
             }
         }
     }
@@ -72,7 +77,13 @@ public class GameController : MonoBehaviour
     //Sau bao nhiêu lần ngập hành thì cũng thắng được trận
     void Complete()
     {
-
+        if (play == true)
+        {
+            if (countTime <= 0)
+            {
+                complete.SetActive(true);
+            }
+        }
     }
 
     //Trở về nhà
@@ -130,8 +141,8 @@ public class GameController : MonoBehaviour
     {
         if (play == true)
         {
-            float time= timeFinish + timeStart - Time.time;
-            countTime.value = time;
+            countTime = timeFinish + timeStart - Time.time;
+            timeBar.value = countTime;
         }
     }
 }

@@ -58,10 +58,10 @@ public class Monster : MonoBehaviour
             count -= 1;
             damge = count;
         }
-        if (other.tag == "Gate")
-        {
-            Debug.Log(gameObject.tag + " = " + (Time.time - timeStart));
-        }
+        //if (other.tag == "Gate")
+        //{
+        //    Debug.Log(gameObject.tag + " = " + (Time.time - timeStart));
+        //}
     }
 
     //Đi qua cổng dưới thì hủy

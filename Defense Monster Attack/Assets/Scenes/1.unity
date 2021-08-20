@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: bf0a56eaaace35f43adcfc91d7095460,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -11891,7 +11892,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 365544841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1435699703}
+        m_MethodName: GoHome
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &365544841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21677,7 +21689,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1047612715}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1435699703}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1047612715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35027,11 +35050,12 @@ MonoBehaviour:
   gate: []
   gameOver: {fileID: 0}
   complete: {fileID: 0}
-  timeFinish: 20
+  timeFinish: 40
+  countTime: 0
   play: 0
   timeStart: 0
   player: {fileID: 0}
-  countTime: {fileID: 369920844}
+  timeBar: {fileID: 369920844}
 --- !u!1 &1444029522
 GameObject:
   m_ObjectHideFlags: 0
@@ -47514,7 +47538,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1764449559}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1435699703}
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1764449559
 MonoBehaviour:
   m_ObjectHideFlags: 0
