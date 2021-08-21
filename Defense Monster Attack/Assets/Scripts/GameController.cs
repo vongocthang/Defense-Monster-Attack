@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject[] gate;//Cổng bên dưới/cần bảo vệ
+    GameObject[] gate;//Cổng bên dưới/cần bảo vệ
     public GameObject gameOver;//UI
     public GameObject complete;//UI
     public float timeFinish;//Thời gian giới hạn của màn chơi
-    public float countTime;//Đếm thời gian
-    public bool play;//Kiểm tra đã ấn nút Start
-    public float timeStart;//Mốc thời gian bắt đầu chơi
-    public Player player;
+    float countTime;//Đếm thời gian
+    bool play;//Kiểm tra đã ấn nút Start
+    float timeStart;//Mốc thời gian bắt đầu chơi
+    Player player;
     public Slider timeBar;//Hiển thị thời gian giới hạn của màn chơi
+    public TMP_Text level;//Hiển thị cấp độ màn chơi
 
     // Start is called before the first frame update
     void Start()
@@ -24,19 +26,22 @@ public class GameController : MonoBehaviour
         SceneOpened();
         //
         gate = GameObject.FindGameObjectsWithTag("Gate");
-        //
-        gameOver = GameObject.FindGameObjectWithTag("GameOver");
-        gameOver.SetActive(false);
-        //
-        complete = GameObject.FindGameObjectWithTag("Complete");
-        complete.SetActive(false);
-        //
-        player = GameObject.Find("Player").GetComponent<Player>();
+        ////
+        //gameOver = GameObject.FindGameObjectWithTag("GameOver");
+        //gameOver.SetActive(false);
+        ////
+        //complete = GameObject.FindGameObjectWithTag("Complete");
+        //complete.SetActive(false);
+        //Không xài Find() vì nó nặng nếu muốn phát triển game hơn nữa 
+        GameObject[] a = GameObject.FindGameObjectsWithTag("Player");
+        player = a[0].GetComponent<Player>();
         player.enabled = false;
         //Hiển thị thời gian giới hạn
         timeBar.maxValue = timeFinish;
         timeBar.value = timeFinish;
         countTime = timeFinish;
+        //
+        level.text = "Level " + SceneManager.GetActiveScene().buildIndex;
     }
 
     //Lưu màn chơi được mở khóa mới nhất

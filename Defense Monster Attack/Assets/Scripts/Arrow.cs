@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    public float speed;
-    Rigidbody2D rb;
+    float speed;
     Collider2D cd;
     Arrow arrow;
-    Transform monster;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         cd = GetComponent<Collider2D>();
         arrow = GetComponent<Arrow>();
+        speed = 6;
     }
 
     // Update is called once per frame

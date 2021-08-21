@@ -36,7 +36,8 @@ public class CreateMonster : MonoBehaviour
         StopCreate();
     }
 
-    //
+    //Quái vật được tạo vào mốc thời gian (và cấp độ) được thiết lập cho mỗi màn chơi
+    //Độ khó tăng dần
     void Create()
     {
         //Ấn nút Start thì quái vật mới bắt đầu xuất hiện từ cổng
@@ -46,8 +47,7 @@ public class CreateMonster : MonoBehaviour
             {
                 if (Time.time >= createTime[i] + timeStart && i == count)
                 {
-                    //Debug.Log("Time System= " + Time.time);
-                    //Debug.Log(gameObject.name + " create Monster");
+                    //Chọn ngẫu nhiên trong 4 quái vật
                     switch (callMonster[i])
                     {
                         case 1:
