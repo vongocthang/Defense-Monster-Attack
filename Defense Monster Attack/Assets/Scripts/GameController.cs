@@ -12,8 +12,8 @@ public class GameController : MonoBehaviour
     public GameObject complete;//UI
     public float timeFinish;//Thời gian giới hạn của màn chơi
     float countTime;//Đếm thời gian
-    bool play;//Kiểm tra đã ấn nút Start
-    float timeStart;//Mốc thời gian bắt đầu chơi
+    public bool play;//Kiểm tra đã ấn nút Start
+    public float timeStart;//Mốc thời gian bắt đầu chơi
     Player player;
     public Slider timeBar;//Hiển thị thời gian giới hạn của màn chơi
     public TMP_Text level;//Hiển thị cấp độ màn chơi
