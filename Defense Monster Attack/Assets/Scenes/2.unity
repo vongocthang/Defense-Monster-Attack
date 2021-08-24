@@ -24050,11 +24050,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 2
-  - 11
-  - 20
-  - 32
-  callMonster: 01000000010000000100000001000000
+  - 10
+  - 25
+  callMonster: 0400000001000000
 --- !u!4 &6559836765397369606
 Transform:
   m_ObjectHideFlags: 0
@@ -28725,9 +28723,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 10
+  - 0
+  - 6
+  - 14
   - 24
-  callMonster: 0300000002000000
+  callMonster: 01000000020000000300000004000000
 --- !u!4 &6559836765399342877
 Transform:
   m_ObjectHideFlags: 0
@@ -38148,9 +38148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 16
-  - 27
-  callMonster: 0400000002000000
+  - 2
+  - 8
+  - 14
+  - 22
+  - 24
+  callMonster: 0100000001000000020000000200000001000000
 --- !u!198 &6559836765938972772
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -43041,7 +43044,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 6739453820273612926}
-  count: 5
+  count: 7
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!1 &6739453819137506522
@@ -43328,7 +43331,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 6739453820883318094}
-  count: 5
+  count: 10
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!1 &6739453819324774869
@@ -43566,7 +43569,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 6739453819182286751}
-  count: 5
+  count: 7
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!1 &6739453819818703907
@@ -71688,10 +71691,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createTime:
   - 0
-  - 7
-  - 17
-  - 34
-  callMonster: 01000000020000000100000001000000
+  - 6
+  - 12
+  - 18
+  - 24
+  - 30
+  - 36
+  callMonster: 01000000010000000100000001000000010000000100000001000000
 --- !u!1 &7939616924534456353
 GameObject:
   m_ObjectHideFlags: 0
@@ -73390,14 +73396,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1fad71d5b342d4388bab6a43e1af17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gate: []
   gameOver: {fileID: 8771214764149980309}
   complete: {fileID: 8771214764334677584}
   timeFinish: 40
-  countTime: 0
   play: 0
   timeStart: 0
-  player: {fileID: 0}
   timeBar: {fileID: 8771214763478533925}
   level: {fileID: 8771214765184629494}
 --- !u!224 &8771214764561089951

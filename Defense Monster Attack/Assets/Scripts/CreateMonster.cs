@@ -52,31 +52,31 @@ public class CreateMonster : MonoBehaviour
                     {
                         case 1:
                             GameObject m1 = monster1[Random.Range(0, 3)];
-                            clone = Instantiate(m1, transform.position,
+                            clone = Instantiate(m1, transform.position + new Vector3(0, 0.5f, 0),
                                 m1.transform.rotation);
                             clone.GetComponent<Monster>().enabled = true;
                             break;
                         case 2:
                             GameObject m2 = monster2[Random.Range(0, 3)];
-                            clone = Instantiate(m2, transform.position,
+                            clone = Instantiate(m2, transform.position + new Vector3(0, 0.5f, 0),
                                 m2.transform.rotation);
                             clone.GetComponent<Monster>().enabled = true;
                             break;
                         case 3:
                             GameObject m3 = monster3[Random.Range(0, 3)];
-                            clone = Instantiate(m3, transform.position,
+                            clone = Instantiate(m3, transform.position + new Vector3(0, 0.5f, 0),
                                 m3.transform.rotation);
                             clone.GetComponent<Monster>().enabled = true;
                             break;
                         case 4:
                             GameObject m4 = monster4[Random.Range(0, 3)];
-                            clone = Instantiate(m4, transform.position,
+                            clone = Instantiate(m4, transform.position + new Vector3(0, 0.5f, 0),
                                 m4.transform.rotation);
                             clone.GetComponent<Monster>().enabled = true;
                             break;
                         case 5:
                             GameObject m5 = monster5[Random.Range(0, 3)];
-                            clone = Instantiate(m5, transform.position,
+                            clone = Instantiate(m5, transform.position + new Vector3(0, 0.5f, 0),
                                 m5.transform.rotation);
                             clone.GetComponent<Monster>().enabled = true;
                             break;
@@ -87,7 +87,7 @@ public class CreateMonster : MonoBehaviour
         }
     }
 
-    //Kết thúc tạo quái vật
+    //Kết thúc tạo quái vật xóa cổng
     void StopCreate()
     {
         if (count > createTime.Length)

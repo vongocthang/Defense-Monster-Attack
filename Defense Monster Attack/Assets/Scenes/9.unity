@@ -13699,7 +13699,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dbe3d6097b0006f4cb9bb4c486dd65cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 463d51d471a47ce4e939dea6eec976fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13954,7 +13954,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dbe3d6097b0006f4cb9bb4c486dd65cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 463d51d471a47ce4e939dea6eec976fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14018,7 +14018,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dbe3d6097b0006f4cb9bb4c486dd65cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 463d51d471a47ce4e939dea6eec976fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14099,7 +14099,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dbe3d6097b0006f4cb9bb4c486dd65cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 463d51d471a47ce4e939dea6eec976fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -29588,7 +29588,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dc31e7450a375494fa86c4f19e72fb76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 264438677d50b754eb1baf82f09ab652, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -30797,14 +30797,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1fad71d5b342d4388bab6a43e1af17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gate: []
   gameOver: {fileID: 8570921481674239430}
   complete: {fileID: 8570921481892228867}
   timeFinish: 40
-  countTime: 0
   play: 0
   timeStart: 0
-  player: {fileID: 0}
   timeBar: {fileID: 8570921482076280438}
   level: {fileID: 8570921480556817317}
 --- !u!114 &8570921481045038286

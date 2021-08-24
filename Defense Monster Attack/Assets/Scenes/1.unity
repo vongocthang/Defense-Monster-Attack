@@ -11179,7 +11179,7 @@ Transform:
   - {fileID: 744693223}
   - {fileID: 1850958344}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &294077560
 GameObject:
@@ -21964,7 +21964,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 69201647}
-  count: 5
+  count: 4
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!1 &1063449021
@@ -35048,14 +35048,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1fad71d5b342d4388bab6a43e1af17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gate: []
   gameOver: {fileID: 1041395964}
   complete: {fileID: 588526137}
   timeFinish: 40
-  countTime: 0
   play: 0
   timeStart: 0
-  player: {fileID: 0}
   timeBar: {fileID: 369920844}
   level: {fileID: 1891497631}
 --- !u!1 &1444029522
@@ -36627,7 +36624,7 @@ Transform:
   - {fileID: 1977596399}
   - {fileID: 1060985129}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1593751001
 GameObject:
@@ -49673,7 +49670,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 965107018}
-  count: 5
+  count: 6
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!1 &1993544370
@@ -55589,7 +55586,7 @@ Transform:
   - {fileID: 1287616115}
   - {fileID: 1688774021}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2085466737
 GameObject:

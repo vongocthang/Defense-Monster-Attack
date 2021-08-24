@@ -13962,10 +13962,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createTime:
   - 0
-  - 7
-  - 17
-  - 34
-  callMonster: 01000000020000000100000001000000
+  - 5
+  - 10
+  - 15
+  - 20
+  - 25
+  - 30
+  - 35
+  callMonster: 0100000001000000010000000100000001000000010000000100000001000000
 --- !u!1 &1051143515670076754
 GameObject:
   m_ObjectHideFlags: 0
@@ -30583,14 +30587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1fad71d5b342d4388bab6a43e1af17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gate: []
   gameOver: {fileID: 1801671037606317118}
   complete: {fileID: 1801671037421883131}
   timeFinish: 40
-  countTime: 0
   play: 0
   timeStart: 0
-  player: {fileID: 0}
   timeBar: {fileID: 1801671038279137166}
   level: {fileID: 1801671036556397149}
 --- !u!114 &1801671037178557750
