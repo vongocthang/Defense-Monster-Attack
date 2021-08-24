@@ -715,14 +715,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1fad71d5b342d4388bab6a43e1af17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gate: []
   gameOver: {fileID: 2417698607245668206}
   complete: {fileID: 2417698607732092331}
   timeFinish: 40
-  countTime: 0
   play: 0
   timeStart: 0
-  player: {fileID: 0}
   timeBar: {fileID: 2417698606842336478}
   level: {fileID: 2417698606333700365}
 --- !u!114 &2417698605744051814
@@ -3896,7 +3893,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 3568825458800620237}
-  count: 5
+  count: 8
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!1 &3568825458412537098
@@ -4842,7 +4839,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 3568825458457297256}
-  count: 5
+  count: 6
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!4 &3568825459925426368
@@ -4922,7 +4919,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 3568825458929642584}
-  count: 5
+  count: 8
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!1 &3568825459955234112
@@ -5135,7 +5132,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 3568825459548069513}
-  count: 5
+  count: 10
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!1 &3888338823164009700
@@ -5643,9 +5640,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 16
-  - 27
-  callMonster: 0400000002000000
+  - 5
+  - 12
+  - 20
+  - 28
+  callMonster: 03000000030000000200000002000000
 --- !u!198 &5341444444320992828
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -14930,9 +14929,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
+  - 1
   - 10
-  - 24
-  callMonster: 0300000002000000
+  - 20
+  - 21
+  - 25
+  - 29
+  callMonster: 040000000400000003000000010000000100000001000000
 --- !u!199 &5341444444988719570
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -19650,11 +19653,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 2
-  - 11
-  - 20
-  - 32
-  callMonster: 01000000010000000100000001000000
+  - 8
+  - 13
+  - 18
+  - 23
+  callMonster: 02000000020000000200000002000000
 --- !u!198 &5341444444990954954
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -61351,10 +61354,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createTime:
   - 0
-  - 7
-  - 17
-  - 34
-  callMonster: 01000000020000000100000001000000
+  - 1
+  - 5
+  - 9
+  - 13
+  - 14
+  - 18
+  - 22
+  - 26
+  - 30
+  callMonster: 05000000010000000100000001000000010000000500000001000000010000000100000001000000
 --- !u!1 &9153152974815223534
 GameObject:
   m_ObjectHideFlags: 0

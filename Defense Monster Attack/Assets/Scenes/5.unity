@@ -1968,14 +1968,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1fad71d5b342d4388bab6a43e1af17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gate: []
   gameOver: {fileID: 381913031032315447}
   complete: {fileID: 381913030813834482}
   timeFinish: 40
-  countTime: 0
   play: 0
   timeStart: 0
-  player: {fileID: 0}
   timeBar: {fileID: 381913031704634759}
   level: {fileID: 381913030053173332}
 --- !u!224 &381913030638135101
@@ -8914,9 +8911,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 16
-  - 27
-  callMonster: 0400000002000000
+  - 0
+  - 6
+  - 12
+  - 18
+  - 24
+  - 30
+  callMonster: 020000000200000001000000010000000100000001000000
 --- !u!198 &2205811595448400964
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -13518,9 +13519,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 10
+  - 0
+  - 6
+  - 12
+  - 18
   - 24
-  callMonster: 0300000002000000
+  - 30
+  callMonster: 020000000200000002000000020000000200000001000000
 --- !u!4 &2205811595988802365
 Transform:
   m_ObjectHideFlags: 0
@@ -18317,11 +18322,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 2
-  - 11
-  - 20
-  - 32
-  callMonster: 01000000010000000100000001000000
+  - 0
+  - 6
+  - 12
+  - 18
+  - 24
+  - 30
+  callMonster: 010000000100000001000000010000000100000001000000
 --- !u!4 &2205811595991025446
 Transform:
   m_ObjectHideFlags: 0
@@ -60033,10 +60040,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createTime:
   - 0
-  - 7
-  - 17
-  - 34
-  callMonster: 01000000020000000100000001000000
+  - 6
+  - 12
+  - 18
+  - 24
+  - 30
+  callMonster: 020000000200000002000000020000000200000001000000
 --- !u!1 &3150983425364263937
 GameObject:
   m_ObjectHideFlags: 0
@@ -60329,7 +60338,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 3573940932203824824}
-  count: 5
+  count: 6
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!61 &3573940932094916848
@@ -60409,7 +60418,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 3573940932826395753}
-  count: 5
+  count: 7
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!224 &3573940932124814704
@@ -61442,7 +61451,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 3573940933217561340}
-  count: 5
+  count: 3
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!61 &3573940933400173881

@@ -14,8 +14,7 @@ public class Monster : MonoBehaviour
     float moveSpeed;
     public ParticleSystem psDie;
     bool dead = false;
-
-    float timeStart;
+    AudioSource ado;
 
     //public GameObject test;
 
@@ -28,8 +27,7 @@ public class Monster : MonoBehaviour
         damge = infor.damge;
         cd = GetComponent<Collider2D>();
         moveSpeed = infor.speed;
-
-        timeStart = Time.time;
+        ado = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,6 +53,7 @@ public class Monster : MonoBehaviour
     {
         if (other.tag == "Arrow")
         {
+            ado.Play();
             count -= 1;
             damge = count;
         }

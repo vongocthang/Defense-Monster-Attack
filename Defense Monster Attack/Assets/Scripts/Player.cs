@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     Animator anim;
     Rigidbody2D arrowRb;
     float angle;
+    AudioSource ado;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         arrow = GameObject.FindGameObjectWithTag("Arrow");
         arrowRb = arrow.GetComponent<Rigidbody2D>();
+        ado = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class Player : MonoBehaviour
             if(Time.time > timeLine + attackRate)
             {
                 timeLine = Time.time;
+                ado.Play();
 
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 Vector3 a = new Vector3(ray.origin.x, ray.origin.y, ray.origin.z);

@@ -605,7 +605,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 3723273503498171374}
-  count: 5
+  count: 6
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!114 &3723273502819586624
@@ -898,7 +898,7 @@ MonoBehaviour:
   infor4: {fileID: 11400000, guid: 3d7de20a8939bf14cb827bc96cc1bc62, type: 2}
   infor5: {fileID: 11400000, guid: c0af9c6d086255446bb78d172c7b4660, type: 2}
   health: {fileID: 3723273502408420367}
-  count: 5
+  count: 4
   hitDamge: {fileID: 8016078387668584417, guid: 8fd61a238bb5308478649a3d68465f0e,
     type: 3}
 --- !u!1 &3723273503498171372
@@ -15353,10 +15353,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createTime:
   - 0
-  - 7
-  - 17
-  - 34
-  callMonster: 01000000020000000100000001000000
+  - 5
+  - 10
+  - 15
+  - 20
+  - 25
+  - 30
+  callMonster: 01000000010000000100000001000000010000000100000001000000
 --- !u!1 &4632766447291477718
 GameObject:
   m_ObjectHideFlags: 0
@@ -29600,14 +29603,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1fad71d5b342d4388bab6a43e1af17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gate: []
   gameOver: {fileID: 8068886902028645683}
   complete: {fileID: 8068886901710288886}
   timeFinish: 40
-  countTime: 0
   play: 0
   timeStart: 0
-  player: {fileID: 0}
   timeBar: {fileID: 8068886901356416643}
   level: {fileID: 8068886900927607632}
 --- !u!224 &8068886900342606905
@@ -51650,9 +51650,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
+  - 2
+  - 9
   - 16
-  - 27
-  callMonster: 0400000002000000
+  - 23
+  - 30
+  callMonster: 0200000002000000020000000200000001000000
 --- !u!1 &8461405837150092831
 GameObject:
   m_ObjectHideFlags: 0
@@ -60961,9 +60964,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 10
-  - 24
-  callMonster: 0300000002000000
+  - 1
+  - 6
+  - 11
+  - 16
+  - 21
+  - 26
+  - 31
+  callMonster: 01000000010000000100000001000000010000000100000002000000
 --- !u!1 &8461405837819686385
 GameObject:
   m_ObjectHideFlags: 0
@@ -65697,11 +65705,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createTime:
-  - 2
-  - 11
-  - 20
-  - 32
-  callMonster: 01000000010000000100000001000000
+  - 3
+  - 18
+  callMonster: 0400000004000000
 --- !u!1 &8461405837834196674
 GameObject:
   m_ObjectHideFlags: 0
