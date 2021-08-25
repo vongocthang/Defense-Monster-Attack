@@ -17,21 +17,17 @@ public class GameController : MonoBehaviour
     Player player;
     public Slider timeBar;//Hiển thị thời gian giới hạn của màn chơi
     public TMP_Text level;//Hiển thị cấp độ màn chơi
+    public GameObject musicON;
+    public GameObject musicOFF;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log(PlayerPrefs.GetInt("SceneOpened"));
+        SetupAudio();
         //
         SceneOpened();
         //
         gate = GameObject.FindGameObjectsWithTag("Gate");
-        ////
-        //gameOver = GameObject.FindGameObjectWithTag("GameOver");
-        //gameOver.SetActive(false);
-        ////
-        //complete = GameObject.FindGameObjectWithTag("Complete");
-        //complete.SetActive(false);
         //Không xài Find() vì nó nặng nếu muốn phát triển game hơn nữa 
         GameObject[] a = GameObject.FindGameObjectsWithTag("Player");
         player = a[0].GetComponent<Player>();
@@ -52,6 +48,23 @@ public class GameController : MonoBehaviour
         if (so < SceneManager.GetActiveScene().buildIndex)
         {
             PlayerPrefs.SetInt("SceneOpened", SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    //Cài đặt nhạc nền-âm thanh
+    void SetupAudio()
+    {
+        if (PlayerPrefs.GetString("Music") == "off")
+        {
+            GetComponent<AudioSource>().Stop();
+            musicOFF.SetActive(true);
+            musicON.SetActive(false);
+        }
+        else
+        {
+            GetComponent<AudioSource>().Play();
+            musicOFF.SetActive(false);
+            musicON.SetActive(true);
         }
     }
 
@@ -142,6 +155,7 @@ public class GameController : MonoBehaviour
         player.enabled = false;
     }
 
+    //Hiển thị thời gian giới hạn của màn chơi bằng Slider
     void ShowLimitedTime()
     {
         if (play == true)
@@ -149,5 +163,11 @@ public class GameController : MonoBehaviour
             countTime = timeFinish + timeStart - Time.time;
             timeBar.value = countTime;
         }
+    }
+
+    //Bật tắt nhạc nền
+    public void CheckAudio(string check)
+    {
+        PlayerPrefs.SetString("Music", check);
     }
 }

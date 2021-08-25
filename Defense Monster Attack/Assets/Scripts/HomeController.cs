@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class HomeController : MonoBehaviour
 {
+    public GameObject musicON;
+    public GameObject musicOFF;
+
     // Start is called before the first frame update
     void Start()
     {
-        //PlayerPrefs.SetInt("SceneOpened", 0);
+        SetupAudio();
     }
 
     // Update is called once per frame
@@ -30,5 +33,28 @@ public class HomeController : MonoBehaviour
         {
             SceneManager.LoadScene(PlayerPrefs.GetInt("SceneOpened"));
         }
+    }
+
+    //Cài đặt nhạc nền-âm thanh
+    void SetupAudio()
+    {
+        if (PlayerPrefs.GetString("Music") == "off")
+        {
+            //GetComponent<AudioSource>().Stop();
+            musicOFF.SetActive(true);
+            musicON.SetActive(false);
+        }
+        else
+        {
+            //GetComponent<AudioSource>().Play();
+            musicOFF.SetActive(false);
+            musicON.SetActive(true);
+        }
+    }
+
+    //Bật tắt nhạc nền
+    public void CheckAudio(string check)
+    {
+        PlayerPrefs.SetString("Music", check);
     }
 }

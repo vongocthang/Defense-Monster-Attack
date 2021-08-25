@@ -19,9 +19,6 @@ public class Stage : MonoBehaviour
         number.text = stage.ToString();//Đánh số Stage tương ứng với Scene
 
         sceneOpened = PlayerPrefs.GetInt("SceneOpened");
-
-        Debug.Log(PlayerPrefs.GetInt("SceneOpened"));
-        //Unlock();
     }
 
     // Update is called once per frame
