@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class test : MonoBehaviour
 {
@@ -9,13 +11,16 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int so = PlayerPrefs.GetInt("SceneOpened");
-        Debug.Log(so);
-
+        
     }
 
     // Update is called once per frame
     void Update()
+    {
+ 
+    }
+
+    public void ClickButton()
     {
 
     }

@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     Rigidbody2D arrowRb;
     float angle;
     AudioSource ado;
+    public GameController mainUI;
 
     // Start is called before the first frame update
     void Start()
@@ -39,14 +40,37 @@ public class Player : MonoBehaviour
     //
     void Attack()
     {
-        //if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //Ray ray1 = Camera.main.(Input.mousePosition);
+            Debug.Log(Input.mousePosition);
+
+            Vector3 a = new Vector3(ray.origin.x, ray.origin.y, ray.origin.z);
+            a = a - new Vector3(0, 0, ray.origin.z);
+            Vector3 direction = a - arrow.transform.position;
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            arrowRb.rotation = angle;
+
+            
+
+            if (Time.time > timeLine + attackRate)
+            {
+                timeLine = Time.time;
+                ado.Play();
+
+                StartCoroutine(AnimDelay());
+            }
+        }
+
+        //if (Input.touchCount > 0)
         //{
-        //    if(Time.time > timeLine + attackRate)
+        //    if (Time.time > timeLine + attackRate)
         //    {
         //        timeLine = Time.time;
         //        ado.Play();
 
-        //        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
         //        Vector3 a = new Vector3(ray.origin.x, ray.origin.y, ray.origin.z);
         //        a = a - new Vector3(0, 0, ray.origin.z);
         //        Vector3 direction = a - arrow.transform.position;
@@ -56,24 +80,6 @@ public class Player : MonoBehaviour
         //        StartCoroutine(AnimDelay());
         //    }
         //}
-
-        if (Input.touchCount > 0)
-        {
-            if (Time.time > timeLine + attackRate)
-            {
-                timeLine = Time.time;
-                ado.Play();
-
-                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-                Vector3 a = new Vector3(ray.origin.x, ray.origin.y, ray.origin.z);
-                a = a - new Vector3(0, 0, ray.origin.z);
-                Vector3 direction = a - arrow.transform.position;
-                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                arrowRb.rotation = angle;
-
-                StartCoroutine(AnimDelay());
-            }
-        }
     }
 
     //Độ trễ của hoạt hình bắn cung
@@ -89,5 +95,23 @@ public class Player : MonoBehaviour
         imageArrow.SetActive(true);
         clone.GetComponent<Arrow>().enabled = true;
         timeLine = Time.time;
+    }
+
+    IEnumerator ClickUI()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (mainUI.clickUI == false)
+        {
+            StartCoroutine(AnimDelay());
+        }
+        else
+        {
+            Debug.Log("click button");
+        }
+    }
+
+    void OnMouseDown()
+    {
+
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class GameController : MonoBehaviour
     public TMP_Text level;//Hiển thị cấp độ màn chơi
     public GameObject musicON;
     public GameObject musicOFF;
+    public bool clickUI;//Ấn vào UI Button
+
+    public Button btn1;
+    public Button btn2;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +43,9 @@ public class GameController : MonoBehaviour
         countTime = timeFinish;
         //
         level.text = "Level " + SceneManager.GetActiveScene().buildIndex;
+
+        Debug.Log(btn1.transform.position);
+        Debug.Log(btn2.transform.position);
     }
 
     //Lưu màn chơi được mở khóa mới nhất
@@ -169,5 +177,15 @@ public class GameController : MonoBehaviour
     public void CheckAudio(string check)
     {
         PlayerPrefs.SetString("Music", check);
+    }
+
+    public void ClickUI()
+    {
+        clickUI = true;
+    }
+
+    public void ClickUIEnd()
+    {
+        clickUI = false;
     }
 }
